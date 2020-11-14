@@ -1,0 +1,382 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***** Utility Components ****/
+
+:root {
+    font-size: 62.5%;
+
+    --nav-font: 'Crete Round', serif;
+
+    --title-font:'Grandstander', cursive;
+
+    --standard-font: 'Share', cursive;
+
+    --test-font:'Alegreya Sans', sans-serif;
+
+    --test2-font: 'Open Sans', sans-serif;
+
+    --primary-color-h: rgb(51, 177, 250);
+    
+    --primary-color-focus: rgba(51, 177, 250, 0.521);
+
+    --background-color-m: rgba(255, 227, 203, 0.856);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( rgba(97, 93, 59, 0.151), rgba(231, 197, 6, 0.144) ), url('/img/scroller-background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: var(--test-font);
+}
+
+nav li {
+    list-style: none;
+}
+
+a:link,
+a:visited{
+    text-decoration: none;
+    color:white;
+    font-size: 2rem;
+}
+
+section {
+    height: 100vh;
+}
+
+.special {
+    color: var(--primary-color-h);
+}
+
+/********** navbar ******/
+
+#home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.logo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-content a{ 
+    padding: 10px;
+    border: solid 5px black;
+    font-family: var(--title-font);
+    color: black;
+}
+
+#nav {
+    flex-grow: 2;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul a {
+    font-family: var(--standard-font);
+    font-weight: 800;
+    transition: all 0.2s ease-in;
+}
+nav ul a:hover{
+    color: var(--primary-color-h);
+}
+/******** main *******/
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main_h1 {
+    font-size: 9rem;
+    font-family: var(--title-font);
+    color: white;
+    z-index: 100;
+}
+
+main .main_p {
+    padding: 10vw 15vw 5vw 15vw;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.clicked {
+    display: none;
+}
+
+
+/************** About us ************/
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    position: relative;
+}
+
+.section_about {
+    position: relative;
+    
+    background-color: var(--background-color-m);
+    border-radius: 20px;
+    box-shadow: 0px 0px 75px 0px rgba(0,0,0,1);
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+
+.about_heading {
+    position: absolute;
+    top: -5%;
+    left: 28%;
+    font-family: var(--title-font);
+    font-size: calc(5rem + 2vh);
+}
+
+.about_paragraph {
+    padding: 10vh;
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.about_us_img {
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    float: right;
+    border-radius: 50%;
+    margin: 8vh;
+}
+
+/******************** Services **********************/
+#services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#services_container {
+    height: 23vh;
+    margin: 5px;
+    width: 50%;
+    background-color: var(--background-color-m);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px;
+}
+.services_heading {
+    font-family: var(--title-font);
+    font-size: calc(5rem + 2vh);
+}
+
+#services_container img {
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    background-position: center;
+}
+
+#services_container-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.services_container-heading {
+    margin-bottom: 20px;
+}
+
+/************************ Booking ****************/
+#booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#booking_container {
+    height: 80vh;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color-m);
+    border-radius: 20px;
+}
+
+#bookimage {
+    height: 100%;
+    width: 30%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 2px solid black;
+}
+.displaying {
+    display: none;
+}
+.booking-input {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--primary-color-h);
+    padding: 5px 2px;
+}
+label {
+    font-size: 1.7rem;
+}
+.booking_container-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-grow: 1;
+    flex-direction: column;
+    position: relative;
+}
+#booking-input:focus {
+    background-color: var(--primary-color-focus);
+    border: none;
+    border-bottom: 2px solid var(--primary-color-h);
+    outline: none;
+}
+
+select#beach {
+    background-color: var(--primary-color-focus);
+    height: 30px;
+    width: 120px;
+    margin: 20px 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+#booking-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-color-h);
+    cursor: pointer;
+}
+.checkbox-wrapper {
+    margin: 10px 0;
+}
+
+.booking_text{
+    position: absolute;
+    top: -50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.booking_text-heading {
+    font-family: var(--title-font);
+    font-size: 4rem;
+}
+.booking_text-paragraph {
+    font-family: var(--test-font);
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+.terms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.terms-of-service{
+    position: absolute;
+    bottom: -50%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+
+/*********************** Smooth Scroll Buttons *********************/
+
+.smooth_scroll-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 30%;
+    background-color: transparent;
+    transition: all 0.5s;
+    color: white;
+    border: none;
+    border: 2px solid white;
+}
+.smooth_scroll-btn:hover{
+    background-color: var(--background-color-m);
+    transform: scale(1.2);
+}
+
+.arrow-up{
+    position: fixed;
+    left: 10%;
+    bottom: 10%;
+}
+
+.arrow-down{
+    position: fixed;
+    right: 10%;
+    bottom: 10%;
+}
+
+
+
+
+
+@media screen and (max-width: 1434px) {
+
+    .about_heading{
+        left: 20%;
+        top: 0%;
+    }
+}

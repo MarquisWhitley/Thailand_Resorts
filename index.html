@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styling-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Grandstander:wght@800&family=Share:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300&family=Open+Sans:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/323f47796f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <title>ThailandResort</title>
+  </head>
+  <body>
+    <!-- Nav-Bar -->
+    <header id="home">
+      <div class="logo">
+        <div class="logo-content"><a href="#main">TR</a></div>
+      </div>
+
+      <nav id="nav">
+        <div class="nav-center"></div>
+        <ul>
+          <li><a href="#main">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content-->
+    <main id="main">
+      <h1 class="main_h1">Thailand Resort</h1>
+      <p class="main_p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis et,
+        velit consectetur quia impedit eum, saepe odit minus repellendus natus
+        suscipit ullam recusandae sunt doloribus laudantium animi! Tenetur,
+        minus neque?
+      </p>
+
+      <!-- Sign UP/ Register Form -->
+      <button type="button" id="show">EXPLORE WITH US</button>
+
+      <div class="container">
+        <form action="" id="form" class="form">
+          <h2 class="form_h2">Register With Us</h2>
+          <div class="form-control">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              id="password2"
+              placeholder="Enter password again"
+            />
+            <small>Error message</small>
+          </div>
+          <div>
+            <button type="submit">Register</button>
+          </div>
+        </form>
+        <i class="fas fa-times" id="close"></i>
+      </div>
+    </main>
+
+    <!-- About Us-->
+
+    <section id="about">
+      <div class="section_about">
+        <h2 class="about_heading">About Us</h2>
+        <img src="/img/aboutus.jpg" alt="" class="about_us_img" />
+        <p class="about_paragraph">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          et, velit consectetur quia impedit eum, saepe odit minus repellendus
+          natus suscipit ullam recusandae sunt doloribus laudantium animi!
+          Tenetur, minus neque? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Consequatur cumque odio itaque unde? Porro unde
+          sapiente corporis placeat facere ea ex quod quas quae perferendis
+          aliquam ab atque, quo optio?
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2 class="services_heading">Services</h2>
+
+      <div id="services_container" class="services_tours">
+        <div id="services_container-text">
+          <h1 class="services_tours-heading">Tow Boat Ride</h1>
+          <p class="services_tours-paragraph">
+            Take a <span class="special">Tow Boat Ride</span> around the coast
+            of Thailand's most beautiful lakes and rivers
+          </p>
+          <ul>
+            <li>Cheow Lan Lake</li>
+            <li>Gulf of Thailand</li>
+            <li>Phang Nga Bay</li>
+          </ul>
+        </div>
+        <img src="/img/tours.jpg" alt="" />
+      </div>
+      <div id="services_container" class="services_party">
+        <img src="/img/party.jpg" alt="" />
+        <div id="services_container-text">
+          <h1 class="services_container-heading">Night Lights</h1>
+          <p class="services_container-paragraph">
+            Spend the night out with your friends and enjoy
+            <span class="special">Thailand's night lights!</span>
+          </p>
+        </div>
+      </div>
+      <div id="services_container" class="services_massage">
+        <div id="services_container-text">
+          <h1 class="services_container-heading">Massage Therapy</h1>
+          <p class="services_container-paragraph">
+            Take a break from life and enjoy a nice relaxing hot stone treatment
+            from the <span class="special">Best Globally Rated</span> Massages!
+          </p>
+        </div>
+        <img src="/img/massage.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- Booking -->
+
+    <section id="booking">
+      <div id="booking_container">
+        <div class="booking_container-input">
+          <div class="booking_text">
+            <h1 class="booking_text-heading">Book Now</h1>
+            <p class="booking_text-paragraph">
+              Book A Stay At One of Our Lovely Beaches<br />
+              or <br />Explore Thailand's Main Attractions
+            </p>
+          </div>
+
+          <form action="" class="booking_form">
+            <input
+              type="text"
+              class="booking-input firstname"
+              placeholder="First Name..."
+            />
+
+            <input
+              type="text"
+              class="booking-input lastname"
+              placeholder="Last Name..."
+            />
+
+            <input
+              type="text"
+              class="booking-input email"
+              placeholder="Email..."
+            />
+
+            <input
+              type="tel"
+              class="booking-input telephone"
+              placeholder="Phone Number..."
+            />
+            <label for="beach">Beaches</label>
+            <select id="beach">
+              <option value="select">Select</option>
+              <option value="phuket">Phuket</option>
+              <option value="pa-tong">Pa Tong</option>
+              <option value="ko-samui">Ko Samui</option>
+              <option value="pattaya-city">Pattaya City</option>
+            </select>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="newsletter" />
+              <label for="newsletter">Sign up for newsletter!</label>
+            </div>
+            <button type="submit" id="booking-submit">Submit</button>
+            <div class="terms">
+              <p class="terms-of-service">
+                By clicking the Submit button you agree to the
+                <span class="special">Terms of Service</span> and
+                <span class="special">Privacy Policy</span>
+              </p>
+            </div>
+          </form>
+        </div>
+        <img
+          src="/img/book.jpg"
+          alt=""
+          id="bookimage"
+          class="change displaying"
+        />
+        <img
+          src="/img/book2.jpg"
+          alt=""
+          id="bookimage"
+          class="change displaying"
+        />
+        <img
+          src="/img/book3.jpg"
+          alt=""
+          id="bookimage"
+          class="change displaying"
+        />
+        <img
+          src="/img/book4.jpg"
+          alt=""
+          id="bookimage"
+          class="change displaying"
+        />
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
